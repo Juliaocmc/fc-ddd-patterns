@@ -172,8 +172,8 @@ describe("Order repository test", () => {
         await orderRepository.create(order2);
 
         const orders = await orderRepository.findAll();
-        // expect(orders.length).toBe(2);
-        // expect([order1, order2]).toEqual(orders)
+        expect(orders.length).toBe(2);
+        expect([order1, order2]).toEqual(orders)
     })
 
     it("should update an order", async () => {
